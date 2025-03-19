@@ -36,8 +36,8 @@ def sitemap():
 @app.route('/people', methods=['GET'])
 def get_all_people():
     people = People.query.all()
-
-    return jsonify(list(map(lambda item: item.serialize(), people))), 200    
+    print("DEBUG: Found people:", people)
+    return jsonify([p.serialize() for p in people]), 200   
 
 @app.route('/people/<int:people_id>', methods=['GET'])
 def get_one_people(people_id):

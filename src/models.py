@@ -25,7 +25,7 @@ class People(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(60), nullable=False)
     birth_year = db.Column(db.String(20))
-    gender = db.Column(db.Text)
+    gender = db.Column(db.String(50))
     height = db.Column(db.Integer)
     skin_color = db.Column(db.String(20))
     eye_color = db.Column(db.String(20))
